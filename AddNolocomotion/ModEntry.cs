@@ -13,7 +13,7 @@ namespace AddNolocomotion;
 
 public class AddNolocomotion : ResoniteMod 
 {
-    internal const string VERSION_CONSTANT = "1.0.0"; 
+    internal const string VERSION_CONSTANT = "1.0.1"; 
     public override string Name => "Add Nolocomotion";
     public override string Author => "ErrorJan";
     public override string Version => VERSION_CONSTANT;
@@ -261,7 +261,6 @@ public class AddNolocomotion : ResoniteMod
         contextMenuItem.Button.SetupLocalAction( SetNoLocomotion );
     }
     
-    [SyncMethod( typeof ( Delegate ), null )]
     public static void SetNoLocomotion( IButton button, ButtonEventData eventData )
     {
         User localUser = Userspace.Current.Engine.WorldManager.FocusedWorld.LocalUser;
